@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+.intro {
+  background-image: url('../img/intro_pic.jpg');
+  background-size: 100% 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.space {
+  margin-top: 60px;
+}
+
+nav .brand-logo {
+  font-size: 25px;
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+.tap-target-content {
+  padding-left: 80px;
+}
+
+.responsive-img {
+  border: solid 1px grey;
+  padding: 4px;
+  width: 100%;
+}
+
+.test img {
+  max-width: 100%;
+  height: 200px;
+}
+
+img.responsive-img, video.responsive-video {
+  max-width: 100%;
+  height: 200px !important;
+}

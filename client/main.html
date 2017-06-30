@@ -1,0 +1,108 @@
+<head>
+  <title>My Gallery</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+
+  {{> nav}}
+  {{> main}}
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+</body>
+
+<!-- Nav -->
+<template name="nav">
+  <nav>
+    <div class="nav-wrapper grey darken-2">
+      <a class="brand-logo">My Gallery</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#">About</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Gallery</a></li>
+        <li class="divider"></li>
+      </ul>
+    </div>
+  </nav><!-- ./nav -->
+</template>
+
+<!-- Main -->
+<template name="main">
+  <div class="container-fluid">
+
+    <div class="row intro">
+      <div class="col s2">
+
+      </div>
+      <div class="col s8 center-align white-text">
+        <h3 class="space">My Image Gallery</h3>
+        <hr />
+        <p class="flow-text">
+          <b><i>Some pictures taken by me</i></b>
+        </p>
+        <a class="btn">Gallery</a>
+        <input type="file" id="myFileInput" value="Upload" />
+      </div>
+      <div class="col s2">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 center-align">
+        <h4>Pictures</h4>
+        <hr />
+      </div>
+    </div>
+
+    <div class="row">
+      {{> pictures}}
+    </div>
+
+    <!-- Tap Target -->
+    <div class="fixed-action-btn" style="bottom:30px;right:30px">
+      <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="waves-effect waves-light btn btn-floating btn-large black">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+
+    <!-- Tap Target Content -->
+    <div class="tap-target black" data-activates="menu">
+      <div class="tap-target-content white-text">
+        <p class="white-text">Some of my pictures uploaded in my Gallery Website</p>
+        <ul>
+          <li>Gallery - For looking into different Galleries</li>
+          <li>About - About me page</li>
+        </ul>
+      </div>
+    </div>
+
+  </div> <!-- ./container-fluid -->
+
+  <script type="text/javascript">
+    // For side-nav
+    $(".button-collapse").sideNav();
+  </script>
+
+</template>
+
+<!-- Pictures -->
+<template name="pictures">
+  {{#each images}}
+    <div class="col s12 m6 l3 test">
+      <img src="{{this.url}}" class="responsive-img" alt="{{this.name}}" />
+    </div>
+  {{/each}}
+
+</template>
