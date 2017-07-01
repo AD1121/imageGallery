@@ -1,7 +1,7 @@
 
 
 /* Inserting a image in the database */
-Template.home.events({
+Template.admin.events({
   'change #myFileInput': function(event, template) {
     event.preventDefault();
     FS.Utility.eachFile(event, function(file) {
