@@ -100,9 +100,19 @@
 <!-- Pictures -->
 <template name="pictures">
   {{#each images}}
-    <div class="col s12 m6 l3 test">
+  <!--  <div class="col s12 m6 l3 test">
       <img src="{{this.url}}" class="responsive-img" alt="{{this.name}}" />
+      <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+    </div> -->
+  <div class="col s12 m6 l3 test">
+    <div class="card">
+        <div class="card-image">
+          <img src="{{this.url}}" class="responsive-img" alt="{{this.name}}" />
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+        </div>
+      </div>
     </div>
+
   {{/each}}
 
 </template>
