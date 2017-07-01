@@ -9,36 +9,31 @@
 </head>
 <body>
 
-  {{> nav}}
-  {{> main}}
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-
-</body>
-
-<!-- Nav -->
-<template name="nav">
+  {{> Template.dynamic template=main}}
   <nav>
     <div class="nav-wrapper grey darken-2">
-      <a class="brand-logo">My Gallery</a>
+      <a href="{{pathFor 'home'}}" class="brand-logo">My Gallery</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">About</a></li>
+        <li><a href="{{pathFor 'about'}}">About</a></li>
         <li><a href="#">Gallery</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">About</a></li>
+        <li><a href="{{pathFor 'about'}}">About</a></li>
         <li class="divider"></li>
         <li><a href="#">Gallery</a></li>
         <li class="divider"></li>
       </ul>
     </div>
   </nav><!-- ./nav -->
-</template>
 
-<!-- Main -->
-<template name="main">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+</body>
+
+<!-- Home -->
+<template name="home">
   <div class="container-fluid">
 
     <div class="row intro">

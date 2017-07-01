@@ -1,14 +1,7 @@
-// Load all the images from database
-Template.pictures.helpers({
-  images: Images.find({}, {
-    sort: {
-      uploadedAt: -1
-    }
-  })
-});
+
 
 /* Inserting a image in the database */
-Template.main.events({
+Template.home.events({
   'change #myFileInput': function(event, template) {
     event.preventDefault();
     FS.Utility.eachFile(event, function(file) {
@@ -16,6 +9,15 @@ Template.main.events({
       Images.insert(file, function(err, fileObj) {});
     });
   }
+});
+
+// Load all the images from database
+Template.pictures.helpers({
+  images: Images.find({}, {
+    sort: {
+      uploadedAt: -1
+    }
+  })
 });
 
 /* Remove a image */
