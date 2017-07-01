@@ -1,7 +1,3 @@
-Images = new FS.Collection("images", {
-  stores: [new FS.Store.FileSystem("images")]
-});
-
 
 // Load all the images from database
  Template.pictures.helpers({
