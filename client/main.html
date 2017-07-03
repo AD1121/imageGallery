@@ -27,7 +27,7 @@
     </div>
   </nav><!-- ./nav -->
 
-  
+
 
   <!-- Tap Target -->
   <div class="fixed-action-btn" style="bottom:30px;right:30px">
@@ -69,20 +69,16 @@
   <div class="container-fluid">
 
     <div class="row intro">
-      <div class="">
 
-      </div>
-      <div class="col s8 center-align white-text">
+      <div class="col s12 center-align white-text">
         <h3 class="space">My Image Gallery</h3>
-        <hr />
+        <hr class="small-hr"/>
         <p class="flow-text">
           <b><i>Some pictures taken by me</i></b>
         </p>
         <a class="btn">Gallery</a>
       </div>
-      <div class="col s2">
 
-      </div>
     </div>
 
     <div class="row">
@@ -167,9 +163,14 @@
       <div class="row">
         <div class="col s12 center-align">
           <hr />
-          &copy; 2017 -All Right <Reserved></Reserved>
+          <span id="copyRight"></span>
         </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    var date = new Date();
+    document.getElementById("copyRight").innerHTML = "&copy; " + date.getFullYear() + " - All Right Reserved";
+  </script>
 </template>

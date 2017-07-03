@@ -42,4 +42,10 @@ img.responsive-img, video.responsive-video {
 footer {
   margin-top: 50px;
   font-size: 1.1em;
+  font-weight: bold;
+}
+
+.small-hr {
+  margin-left: 10%;
+  margin-right: 10%;
 }
