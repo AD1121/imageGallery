@@ -9,7 +9,10 @@
 </head>
 <body>
 
+  <!-- Main Template -->
   {{> Template.dynamic template=main}}
+
+  <!-- Nav -->
   <nav>
     <div class="nav-wrapper grey darken-2">
       <a href="{{pathFor 'home'}}" class="brand-logo">My Gallery</a>
@@ -27,8 +30,6 @@
     </div>
   </nav><!-- ./nav -->
 
-
-
   <!-- Tap Target -->
   <div class="fixed-action-btn" style="bottom:30px;right:30px">
     <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="waves-effect waves-light btn btn-floating btn-large black">
@@ -45,7 +46,7 @@
         <li>About - About me page</li>
       </ul>
     </div>
-  </div>
+  </div> <!-- ./Tap Target Content -->
 
   <script>
 
@@ -64,8 +65,9 @@
 
 </body>
 
-<!-- Home -->
+<!-- Home Template-->
 <template name="home">
+
   <div class="container-fluid">
 
     <div class="row intro">
@@ -101,10 +103,11 @@
     $(".button-collapse").sideNav();
   </script>
 
-</template>
+</template> <!-- ./Home Template-->
 
-<!-- Pictures -->
+<!-- Pictures Template-->
 <template name="pictures">
+
   {{#each images}}
     <div class="col s12 m6 l3 test">
       <div class="card">
@@ -115,9 +118,10 @@
       </div>
     </div>
   {{/each}}
-</template>
 
-<!-- About -->
+</template> <!-- ./Pictures Template-->
+
+<!-- About Template-->
 <template name="about">
   <div class="container-fluid">
 
@@ -147,14 +151,20 @@
       });
     </script>
   </div>
-</template>
+</template> <!--./About Template-->
 
 
-<!-- Admin -->
+<!-- Admin Template -->
 <template name="admin">
-  <h3>Admin page</h3>
-  <input type="file" id="myFileInput" value="Upload" />
-</template>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col s12">
+        <h3>Admin page</h3>
+        <input type="file" id="myFileInput" value="Upload" />
+      </div>
+    </div>
+  </div>
+</template> <!-- ./Admin Template -->
 
 <!-- Footer -->
 <template name="footer">
