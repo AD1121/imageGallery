@@ -1,3 +1,4 @@
+Meteor.subscribe("images");
 
 
 /* Inserting a image in the database */
