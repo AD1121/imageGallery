@@ -156,7 +156,7 @@
 
 <!-- Admin Template -->
 <template name="admin">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col s12">
         <h3>Admin page</h3>
@@ -166,7 +166,7 @@
   </div>
 </template> <!-- ./Admin Template -->
 
-<!-- Footer -->
+<!-- Footer Template -->
 <template name="footer">
   <footer>
     <div class="container-fluid">
@@ -177,10 +177,12 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> <!-- ./Footer -->
 
+  <!-- Javascript for adding years -->
   <script>
     var date = new Date();
     document.getElementById("copyRight").innerHTML = "&copy; " + date.getFullYear() + " - All Right Reserved";
   </script>
-</template>
+
+</template> <!-- ./Footer Template -->
