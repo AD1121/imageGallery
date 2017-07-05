@@ -28,3 +28,5 @@ kadira:flow-router            # flow-router for routing
 zimme:active-route
 kadira:blaze-layout
 arillo:flow-router-helpers
+accounts-ui
+accounts-password
